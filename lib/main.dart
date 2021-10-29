@@ -1,3 +1,4 @@
+import 'package:findup_tech/screens/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:findup_tech/screens/login_screen.dart';
 
@@ -10,7 +11,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'ICR Login',
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginScreen(),
+        '/register': (context) => RegisterScreen(),
+      },
     );
   }
 }
